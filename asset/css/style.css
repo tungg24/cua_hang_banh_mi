@@ -1,0 +1,526 @@
+/*reset css*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-icon {
+    font-size: 14px;
+}
+
+.clear{
+    clear: both;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.mt-8{
+    margin-top: 8px;
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-full {
+    width: 100%;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-third {
+    width: 33.3333%;
+}
+
+
+
+#main {
+
+}
+
+#nav {
+    display: inline-block;
+}
+
+#header {
+   height: 48px;
+   background-color: rgb(270, 12, 12);
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 999;
+}
+
+#nav, .subnav {
+    list-style-type: none;
+}
+
+#nav > li{
+    display: inline-block;
+}
+
+#nav li {
+    position: relative;
+}
+
+#nav li a {
+    color: #ffff;
+    text-decoration: none;
+    line-height: 48px;
+    padding: 0 8px;
+    display: block;
+}
+
+#nav>li>a{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+#nav > li:hover > a {
+     background-color: #cccc;
+     color: rgb(270, 12, 12);
+    
+}
+
+#nav .subnav {
+    display: none;
+    min-width: 130px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(270, 12, 12);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+#nav .subnav a {
+    color: #ffff;
+    padding: 0 20px;
+    line-height: 38px;
+}
+
+#nav  .subnav  li:hover  {
+    background-color: #cccc;
+    color: rgb(270, 12, 12);
+}
+
+#header .search-btn {
+    float: right;
+    padding: 0 24px;
+    cursor: pointer;
+}
+
+
+#header .menu-btn-mobile {
+    float: right;
+    padding: 0 24px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+#header .search-btn:hover {
+    background-color: #cccc;
+}
+
+#header .menu-btn-mobile:hover .menu-icon {
+    background: rgba(0, 0, 0, 0.4);
+    color: #ffff;
+    
+}
+
+#header .menu-icon,
+#header .search-icon {
+    color: #ffff;
+    font-size: 24px;
+    line-height: 48px;
+}
+
+#slider {
+    position: relative;
+    margin-top: 46px;
+    /*Lấy chiều ngang là 50% của chính nó */
+    padding-top: 50%; 
+    background: url(/asset/img/slider2.jpg) center center / cover no-repeat ;
+}
+
+#slider .text-content {
+     position: absolute;
+     bottom: 40px;
+     color: rgb(270, 12, 12);
+     text-align: center;
+     left: 30%;
+     transform: translateX(-50%);
+}
+
+#slider .text-heading {
+     font-weight: 600;
+     text-transform: uppercase;
+     font-size: 30px;
+     letter-spacing: 4px;
+    
+}
+
+#slider .text-description {
+    padding-top: 10px;
+    letter-spacing: 2px;
+    text-transform: none;
+    font-style: italic;
+    margin-bottom: 20px;
+    text-shadow: 0 0 4px #333;
+}
+
+#slider .text-open {
+    margin-top: 20px;
+    text-shadow: 0 0 4px #333;
+}
+
+#slider .text-address {
+    margin-top: 4px;
+
+}
+
+#content {
+     color: rgb(270, 12, 12);
+}
+
+#content .content-section {
+    width: 700px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 0;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+#content .section-heading{
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 4px;
+
+}
+
+#content .section-sub-heading{
+    font-size: 16px;
+    text-align: center;
+    margin-top: 26px;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+#content .about-text {
+    margin-top: 16px;
+    font-style: 16px;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+
+
+#content .about-img {
+    width: 100%;
+    height: 460px;
+    margin-top: 20px;
+}
+
+.about-img:hover .about-img--test {
+    cursor: pointer;
+}
+
+#content .menu-section {
+    margin-top: 20px;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(256, 140, 127);
+    border: 1px solid rgb(270, 12, 12);
+}
+
+#content .menu-heading {
+    font-weight: 800;
+    color: rgb(270, 12, 12);
+    text-transform: uppercase;
+    font-size: 24px;
+    border: 1px solid rgb(270, 12, 12);
+}
+
+#content .text-menu {
+    padding-top: 20px;
+    color: #ffff;
+    font-style: 16px;
+    letter-spacing: 2px;
+}
+
+#content .order-menu {
+    margin: 26px -8px 30px;
+    height: 300px;
+    
+}
+
+#content .list-order {
+    float: left;
+    width: 33.3333%;
+    padding: 0 8px;
+    
+}
+
+#content .img-order {
+    width: 100%;
+    height: 200px;
+    display: block;
+}
+
+#content .img-order:hover {
+    opacity: 0.6;
+}
+
+#content .order-body {
+    background-color: rgb(256, 140, 127);
+    color: rgb(270, 12, 12);
+    text-align: center;
+    padding: 16px;
+    font-size: 16px;
+}
+
+#content .order-heading {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#content .order-money {
+    margin-top: 16px;
+}
+
+#content .order-description {
+    margin-top: 16px;
+}
+
+#content .order-buy-btn {
+    margin-top: 20px;
+    text-decoration: none;
+    display: inline-block;
+    background-color: #ffff;
+    padding: 8px 18px;
+    color: rgb(270, 12, 12);
+    text-align: center;
+}
+
+#content .order-buy-btn:hover {
+     background-color: rgb(270, 12, 12);
+     color: #ffff;
+     cursor: pointer;
+}
+
+.contact-content {
+    margin-top: 48px;
+}
+
+.contact-info {
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+.contact-info i[class*="ti-"] {
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-info a {
+    color: #101aef;
+    opacity: 0.8;
+}
+
+.contact-info a:hover {
+    opacity: 1;
+}
+
+.contact-form{
+    font-size: 16px;
+    color: rgb(270, 12, 12);
+}
+
+.form-control {
+    padding: 16px;
+    border: 1px solid #cccc;
+    width: 100%;
+}
+
+.btn-send {
+    margin-top: 16px;
+    background-color: rgb(256, 140, 127);
+    color: rgb(270, 12, 12);
+    border: 1px solid #cccc;
+    padding: 11px 18px;
+    float: right;
+    appearance: none;
+  
+}
+
+.btn-send:hover {
+    color: #ffff;
+    cursor: pointer;
+    background-color: rgb(270, 12, 12);
+}
+
+
+#footer {
+     padding: 64px 16px;
+     text-align: center;
+}
+
+#footer .socials-list {
+    text-decoration: none;
+    font-size: 24px;
+}
+
+#footer .socials-list a {
+     color: rgba(0, 0, 0, 0.6);
+     text-decoration: none;
+}
+
+#footer .socials-list a:hover {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+#footer .text-footer {
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal-container {
+    background: #ffff;
+    width: 800px;
+    min-width: calc(100%-32px);
+    min-height: 200px;
+    position: relative;
+    animation: modalFadeIn ease .6s;
+}
+
+.modal-header {
+    background: rgb(256, 140, 127);
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffff;
+    font-size: 30px;
+}
+
+.modal-heading-close {
+    position: absolute;
+    color: #ffff;
+    right: 0;
+    top: 0;
+    padding: 4px 16px;
+}
+
+.modal-heading-close:hover {
+    background-color: #ffff;
+    color: rgb(270, 12, 12);
+    cursor: pointer;
+}
+
+.modal-heading-icon {
+    margin-right: 16px;
+}
+
+.modal-body {
+    margin: 16px;
+}
+
+.modal-label {
+    display: block;
+    font-size: 16px;
+    color: rgb(270, 12, 12);
+    margin-bottom: 6px;
+}
+
+.modal-input {
+    border: 1px solid #cccc;
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 10px; 
+}
+
+#buy-order {
+    background: rgb(256, 140, 127);
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    padding: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #ffff;
+}
+
+#buy-order:hover {
+    opacity: 0.9;
+}
+
+.modal-footer {
+     padding: 16px;
+     text-align: right;
+}
+
+.modal-footer a {
+    color: rgb(270, 12, 12);
+}
+
+@keyframes modalFadeIn {
+    form{
+    transform: translateY(-140px);
+    }
+    to {
+    transform: translateY(0);
+    }
+}
